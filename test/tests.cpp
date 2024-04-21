@@ -4,7 +4,7 @@
 #include "textgen.h"
 
 class GenerateTest : public testing::Test {
-protected:
+ protected:
     Generate generate;
 };
 TEST(GenerateTest, Prefix) {
@@ -49,12 +49,8 @@ TEST(GenerateTest, VectorSuffix) {
     std::string text = "qwe rty uio a qwe rty uio b qwe rty uio c";
     int prefixLength = 2;
     generate.CreateTable(text, prefixLength);
-    
     int maxgen = 14;
-
-    
     std::string result = generate.GenerateText(maxgen, 302);
-
     EXPECT_EQ(result, "qwe rty uio c ");
 }
 
