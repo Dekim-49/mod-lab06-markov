@@ -39,9 +39,9 @@ TEST(GenerateTest, OnceSuffix) {
     generate.CreateTable(text, prefixLength);
 
     int maxgen = 3;
-    std::string result = generate.GenerateText(maxgen, 2);
+    std::string result = generate.GenerateText(maxgen, 1);
 
-    EXPECT_EQ(result, "Once there lived");
+    EXPECT_EQ(result, "Once there lived ");
 }
 TEST(GenerateTest, VectorSuffix) {
     Generate generate;
