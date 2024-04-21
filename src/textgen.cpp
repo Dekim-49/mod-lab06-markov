@@ -1,11 +1,10 @@
 // Copyright 2024 Chernyadeva Anna
+#include "textgen.h"
 #include <deque>
 #include <map>
 #include <vector>
 #include <random>
-#include <time.h>  
-#include "textgen.h"
-
+#include <time.h>
 Generate::Generate() {
 }
 void Generate::CreateTable(const std::string& text, int countWordInPrefix) {
@@ -54,7 +53,8 @@ std::string Generate::GenerateText(int maxgen, unsigned int time_generate) {
         generateText += pprefix[i];
         generateText += ' ';
     }
-    for (int i = 0; i < maxgen && statetab.find(pprefix) != statetab.end(); i++) {
+    for (int i = 0; i < maxgen
+         && statetab.find(pprefix) != statetab.end(); i++) {
         std::vector<std::string> suffix = statetab[pprefix];
         if (!suffix.empty()) {
             std::uniform_int_distribution<> dist(0, suffix.size() - 1);
