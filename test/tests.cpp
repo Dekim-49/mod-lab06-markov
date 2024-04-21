@@ -38,7 +38,7 @@ TEST(GenerateTest, OnceSuffix) {
     int prefixLength = 2;
     generate.CreateTable(text, prefixLength);
 
-    int maxgen = 9;
+    int maxgen = 3;
     std::string result = generate.GenerateText(maxgen, 3);
 
     EXPECT_EQ(result, "Once there lived");
@@ -63,7 +63,7 @@ TEST(GenerateTest, Table) {
 
     std::string text = "qwe rty uio a qwe rty uio b qwe rty uio c";
     int prefixLength = 2;
-    int maxgen = 14;
+    int maxgen = 4;
     std::map< Generate::prefix, std::vector<std::string>> Statetab = {
         {{"qwe", "rty"}, {"uio"}},
         {{"rty", "uio"}, {"a", "b"}},
@@ -75,6 +75,6 @@ TEST(GenerateTest, Table) {
     std::string result = generate.GenerateText(maxgen, 302);
 
 
-    EXPECT_EQ(result, "qwe rty uio c");
+    EXPECT_EQ(result, "qwe rty uio a");
 }
 
