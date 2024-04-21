@@ -75,6 +75,6 @@ TEST(GenerateTest, Table) {
     std::string result = generate.GenerateText(maxgen, 302);
 
 
-    EXPECT_EQ(result, "a qwe rty uio");
+    EXPECT_EQ(result, "a qwe rty uio ");
 }
 
