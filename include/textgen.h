@@ -1,4 +1,4 @@
-// Copyright 2024 Danil Volkov
+// Copyright 2024 Chernyadeva Anna
 
 #ifndef INCLUDE_TEXTGEN_H_
 #define INCLUDE_TEXTGEN_H_
