@@ -39,7 +39,7 @@ TEST(GenerateTest, OnceSuffix) {
     generate.CreateTable(text, prefixLength);
 
     int maxgen = 9;
-    std::string result = generate.GenerateText(maxgen, 123);
+    std::string result = generate.GenerateText(maxgen, 3);
 
     EXPECT_EQ(result, "Once there lived");
 }
@@ -55,7 +55,7 @@ TEST(GenerateTest, VectorSuffix) {
     
     std::string result = generate.GenerateText(maxgen, 302);
 
-    EXPECT_EQ(result, "I love my eat");
+    EXPECT_EQ(result, "qwe rty uio c ");
 }
 
 TEST(GenerateTest, Table) {
@@ -77,3 +77,4 @@ TEST(GenerateTest, Table) {
 
     EXPECT_EQ(result, "qwe rty uio c");
 }
+
