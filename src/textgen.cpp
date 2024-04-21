@@ -1,9 +1,9 @@
 // Copyright 2024 Chernyadeva Anna
+#include "textgen.h"
 #include <random>
 #include <deque>
 #include <map>
 #include <vector>
-#include "textgen.h"
 #include <time.h>
 Generate::Generate() {
 }
