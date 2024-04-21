@@ -3,8 +3,8 @@
 #include <deque>
 #include <map>
 #include <vector>
-#include <time.h>
 #include "textgen.h"
+#include <time.h>
 Generate::Generate() {
 }
 void Generate::CreateTable(const std::string& text, int countWordInPrefix) {
