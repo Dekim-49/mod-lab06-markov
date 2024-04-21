@@ -7,13 +7,13 @@
 #include <deque>
 #include <map>
 #include <vector>
+#include <string>
 
 class Generate {
  public:
     typedef std::deque<std::string> prefix;
     prefix pprefix;
     std::map<prefix, std::vector<std::string> > statetab;
-    
  public:
     Generate();
     void CreateTable(const std::string& text, int countWordInPrefix);
