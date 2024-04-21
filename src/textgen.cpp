@@ -1,10 +1,10 @@
 // Copyright 2024 Chernyadeva Anna
-#include "textgen.h"
+#include <random>
 #include <deque>
 #include <map>
 #include <vector>
-#include <random>
 #include <time.h>
+#include "textgen.h"
 Generate::Generate() {
 }
 void Generate::CreateTable(const std::string& text, int countWordInPrefix) {
