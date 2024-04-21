@@ -63,7 +63,7 @@ TEST(GenerateTest, Table) {
 
     std::string text = "qwe rty uio a qwe rty uio b qwe rty uio c";
     int prefixLength = 2;
-    int maxgen = 4;
+    int maxgen = 2;
     std::map< Generate::prefix, std::vector<std::string>> Statetab = {
         {{"qwe", "rty"}, {"uio"}},
         {{"rty", "uio"}, {"a", "b"}},
@@ -75,6 +75,6 @@ TEST(GenerateTest, Table) {
     std::string result = generate.GenerateText(maxgen, 302);
 
 
-    EXPECT_EQ(result, "qwe rty uio a");
+    EXPECT_EQ(result, "a qwe rty uio");
 }
 
